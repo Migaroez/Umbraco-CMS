@@ -6,6 +6,10 @@
                 <div class="umb-table-cell">
 
                     <button type="button" class="umb-table__action" ng-show="vm.allowSelectAll" ng-click="vm.selectAll()">
+                        <span class="sr-only">
+                            <localize ng-show="vm.isSelectedAll() === false" key="general_selectAll">Select all</localize>
+                            <localize ng-show="vm.isSelectedAll()" key="general_deselectAll">Deselect all</localize>
+                        </span>
                         <umb-checkmark checked="vm.isSelectedAll()" size="xs"></umb-checkmark>
                     </button>
 
